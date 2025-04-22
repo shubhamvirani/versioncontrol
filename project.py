@@ -1,23 +1,27 @@
-# Basic Mathematical Operations in Python
+# Functions for mathematical operations
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Undefined (cannot divide by zero)"
 
 # Input numbers
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 
-# Perform operations
-addition = num1 + num2
-subtraction = num1 - num2
-multiplication = num1 * num2
-
-# Handling division by zero
-if num2 != 0:
-    division = num1 / num2
-else:
-    division = "Undefined (cannot divide by zero)"
-
-# Display results
+# Perform operations using functions
 print("\nResults:")
-print(f"Addition: {addition}")
-print(f"Subtraction: {subtraction}")
-print(f"Multiplication: {multiplication}")
-print(f"Division: {division}")
+print(f"Addition: {add(num1, num2)}")
+print(f"Subtraction: {subtract(num1, num2)}")
+print(f"Multiplication: {multiply(num1, num2)}")
+print(f"Division: {divide(num1, num2)}")
